@@ -1,0 +1,2 @@
+- mainscreen.html (line 14) : changed "shop page" header to read "Computer Electronics" -
+- about.html : created and filled with placeholder text -
