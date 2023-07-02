@@ -79,7 +79,7 @@
             <td th:text="${tempProduct.name}">1</td>
             <td th:text="${tempProduct.price}">1</td>
             <td th:text="${tempProduct.inv}">1</td>
-            <td><a th:href="@{/showProductFormForUpdate(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3">Buy Now</a>
+            <td><a th:href="@{/buynow(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3">Buy Now</a>
             <a th:href="@{/showProductFormForUpdate(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
                 <a th:href="@{/deleteproduct(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3"
                    onclick="if(!(confirm('Are you sure you want to delete this product?')))return false">Delete</a>
@@ -88,7 +88,8 @@
         </tbody>
     </table>
     <br><br>
-    <a th:href="@{/about}" style="text-align:right;" th:style="">About Us</a>
+
+    <a th:href="@{/about}" >About</a>
 
 </div>
 <br>

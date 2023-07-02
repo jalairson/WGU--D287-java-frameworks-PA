@@ -6,3 +6,4 @@ work log
 - added inventories for parts and products from mainscreen -
 - added non-working placeholder "Buy Now" buttons to mainscreen.html(line 82) and page breaks (line 90) for visual purposes-
 - created new html files purchasesuccessful and purchasefailed ; created buycontroller -
+- finally made buynow controller work to decrement inventory level and redirect to pass/fail html pages (BuyController lines 18 -48) -
