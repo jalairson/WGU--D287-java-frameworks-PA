@@ -1,0 +1,29 @@
+
+body {
+    text-align: center;
+    background-color: whitesmoke;
+
+}
+
+h1 {
+
+    text-align: center;
+    padding-top: 200px;
+
+}
+
+error {
+    color: red;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+
+}
+
+form {
+    border-color: black;
+    width: 20%;
+    margin: 0 auto;
+}

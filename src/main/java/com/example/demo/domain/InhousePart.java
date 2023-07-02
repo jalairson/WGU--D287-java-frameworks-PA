@@ -2,6 +2,8 @@ package com.example.demo.domain;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 
 /**
  *
@@ -11,7 +13,8 @@ import javax.persistence.Entity;
  */
 @Entity
 @DiscriminatorValue("1")
-public class InhousePart extends Part{
+public class InhousePart extends Part {
+
     int partId;
 
     public InhousePart() {
@@ -24,4 +27,5 @@ public class InhousePart extends Part{
     public void setPartId(int partId) {
         this.partId = partId;
     }
+
 }
