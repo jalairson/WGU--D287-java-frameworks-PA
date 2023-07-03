@@ -1,8 +1,7 @@
 
 body {
-    text-align: center;
+    align: center;
     background-color: whitesmoke;
-
 }
 
 h1 {
@@ -26,4 +25,19 @@ form {
     border-color: black;
     width: 20%;
     margin: 0 auto;
+}
+
+table {
+    align: center;
+
+}
+
+link {
+    text-align: center;
+
+}
+
+a {
+    text-align: center;
+
 }

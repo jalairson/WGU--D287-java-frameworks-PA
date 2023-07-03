@@ -1,8 +1,6 @@
 package com.example.demo.validators;
 
 import com.example.demo.domain.Part;
-import com.example.demo.repositories.InhousePartRepository;
-import com.example.demo.service.InhousePartServiceImpl;
 import com.example.demo.service.PartService;
 import com.example.demo.service.PartServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;

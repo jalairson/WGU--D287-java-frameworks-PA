@@ -10,16 +10,10 @@ import org.springframework.context.ApplicationContext;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-/**
- *
- *
- *
- *
- */
 public class EnufPartsValidator implements ConstraintValidator<ValidEnufParts, Product> {
     @Autowired
     private ApplicationContext context;
-    public static  ApplicationContext myContext;
+
     @Override
     public void initialize(ValidEnufParts constraintAnnotation) {
         ConstraintValidator.super.initialize(constraintAnnotation);
@@ -27,18 +21,20 @@ public class EnufPartsValidator implements ConstraintValidator<ValidEnufParts, P
 
     @Override
     public boolean isValid(Product product, ConstraintValidatorContext constraintValidatorContext) {
-        if(context==null) return true;
-        if(context!=null)myContext=context;
-        ProductService repo = myContext.getBean(ProductServiceImpl.class);
+        if (context == null) return true;
+
+        ProductService productService = context.getBean(ProductServiceImpl.class);
+
         if (product.getId() != 0) {
-            Product myProduct = repo.findById((int) product.getId());
-            for (Part p : myProduct.getParts()) {
-                if (p.getInv()<(product.getInv()-myProduct.getInv()))return false;
+            Product existingProduct = productService.findById((int) product.getId());
+
+            for (Part part : existingProduct.getParts()) {
+                if (part.getInv() < product.getInv() - part.getMinInv()) {
+                    return false;
+                }
             }
-            return true;
         }
-        else{
-                return true;
-            }
+
+        return true;
     }
 }
