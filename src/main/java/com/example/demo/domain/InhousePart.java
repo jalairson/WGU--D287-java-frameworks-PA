@@ -2,15 +2,7 @@ package com.example.demo.domain;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 
-/**
- *
- *
- *
- *
- */
 @Entity
 @DiscriminatorValue("1")
 public class InhousePart extends Part {

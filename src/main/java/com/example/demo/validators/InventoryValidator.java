@@ -9,12 +9,6 @@ import org.springframework.context.ApplicationContext;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-/**
- *
- *
- *
- *
- */
 public class InventoryValidator implements ConstraintValidator<ValidInventory, Part> {
     @Autowired
     private ApplicationContext context;

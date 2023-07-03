@@ -4,16 +4,9 @@ import com.example.demo.domain.OutsourcedPart;
 import com.example.demo.repositories.OutsourcedPartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
-/**
- *
- *
- *
- *
- */
 @Service
 public class OutsourcedPartServiceImpl implements OutsourcedPartService{
     private OutsourcedPartRepository partRepository;
@@ -39,8 +32,6 @@ public class OutsourcedPartServiceImpl implements OutsourcedPartService{
             thePart = result.get();
         }
         else {
-            // we didn't find the OutSourced id
-            //throw new RuntimeException("Did not find part id - " + theId);
             return null;
         }
 
