@@ -20,7 +20,6 @@ public class InventoryValidator implements ConstraintValidator<ValidInventory, P
         ConstraintValidator.super.initialize(constraintAnnotation);
     }
 
-    @Override
     public boolean isValid(Part part, ConstraintValidatorContext constraintValidatorContext) {
         if(context==null) return true;
         if(context!=null)myContext=context;
