@@ -52,9 +52,9 @@ G. Modify the parts to track maximum and minimum inventory by doing the followin
 
 - added minimum and maximum inventory to part domain in [Part.java] (lines 33 - 38 & lines 60 - 83) -
 
-- added minimum and maximum values to sample inventory -
+- added minimum and maximum values to sample inventory via web browser [jdbc:h2:file:~/spring-boot-h2-db102] -
 
-- added minimum and maximum inventory as fields in [InHousePartForm.html] (lines 26 -30) & OutsourcedPartForm.html (lines 27 -31) -
+- added minimum and maximum inventory as fields in [InHousePartForm.html] (lines 26 -30) & [OutsourcedPartForm.html] (lines 27 -31) -
 
 - renamed persistent storage db file to generate new db [jdbc:h2:file:~/spring-boot-h2-db103] -
 
@@ -69,7 +69,7 @@ H. Add validation for between or at the maximum and minimum fields. The validati
 
 - created validator [InventoryValidator.java] and annotation [ValidInventory.java] to validate inventory with minInv and maxInv to produce an error message -
 
-- updated html in [InhousePartsForm.html] (), [OutsourcedPartsForm.html] (), and [mainscreen.html] () to use auxiliary stylesheet -
+- updated html in [InhousePartsForm.html] (line 7) and [OutsourcedPartsForm.html] (line 7) to use auxiliary stylesheet -
 
 - added (lines 9-11) to [productForm.html] importing the same stylesheets -
 
@@ -85,4 +85,4 @@ I.  Add at least two unit tests for the maximum and minimum fields to the PartTe
 
 J.  Remove the class files for any unused validators in order to clean your code.
 
-- removed comments and extraneous import lines -
+- removed comments and extraneous import lines; THERE ARE NO UNUSED VALIDATOR CLASSES -
