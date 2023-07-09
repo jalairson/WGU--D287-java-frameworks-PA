@@ -14,12 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
 
-/**
- *
- *
- *
- *
- */
 @Controller
 public class AddInhousePartController{
     @Autowired

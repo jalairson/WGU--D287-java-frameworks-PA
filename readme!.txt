@@ -22,7 +22,7 @@ D.  Add an “About” page to the application to describe your chosen customer�
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 
 
---- added inventories for parts and products from [mainscreen.html] via web browser [jdbc:h2:file:~/spring-boot-h2-db102] ---
+--- edited [BootStrapData.java] (lines 56 - 122) to add a hardcoded sample inventory of parts and products ---
 
 ============================================================================================================================================================================
 
@@ -50,9 +50,9 @@ G. Modify the parts to track maximum and minimum inventory by doing the followin
 •   Modify the code to enforce that the inventory is between or at the minimum and maximum value.
 
 
-- added minimum and maximum inventory to part domain in [Part.java] (lines 33 - 38 & lines 60 - 83) -
+- added minimum and maximum inventory to part domain in [Part.java] (lines 33 - 38 & lines 60 - 83) including constructor with min and max -
 
-- added minimum and maximum values to sample inventory via web browser [jdbc:h2:file:~/spring-boot-h2-db102] -
+- edited [BootStrapData.java] sample inventory to include min and max inventory values (lines 56 - 122) -
 
 - added minimum and maximum inventory as fields in [InHousePartForm.html] (lines 26 -30) & [OutsourcedPartForm.html] (lines 27 -31) -
 
@@ -67,11 +67,11 @@ H. Add validation for between or at the maximum and minimum fields. The validati
 •   Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
 •   Display error messages when adding and updating parts if the inventory is greater than the maximum.
 
-- created validator [InventoryValidator.java] and annotation [ValidInventory.java] to validate inventory with minInv and maxInv to produce an error message -
+- created validator [InventoryValidator.java] (44 lines) and annotation [ValidInventory.java] (19 lines) to validate inventory with minInv and maxInv to produce an error message -
 
 - updated html in [InhousePartsForm.html] (line 7) and [OutsourcedPartsForm.html] (line 7) to use auxiliary stylesheet -
 
-- added (lines 9-11) to [productForm.html] importing the same stylesheets -
+- added (lines 9-11) to [productForm.html] importing the same stylesheet -
 
 - edited [EnufPartsValidator.java] (lines 12 - 38) and [ValidEnufParts.java] (line 14) to include displaying error message when updating parts lowers inventory below minInv -
 
