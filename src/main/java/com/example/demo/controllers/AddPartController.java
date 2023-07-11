@@ -4,6 +4,7 @@ import com.example.demo.domain.InhousePart;
 import com.example.demo.domain.OutsourcedPart;
 import com.example.demo.domain.Part;
 import com.example.demo.service.*;
+import com.example.demo.validators.ValidInventory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
@@ -12,14 +13,14 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-
+@ValidInventory
 @Controller
 public class AddPartController {
     @Autowired
     private ApplicationContext context;
 
     @GetMapping("/showPartFormForUpdate")
-    public String showPartFormForUpdate(@RequestParam("partID") int theId,Model theModel){
+    public String showPartFormForUpdate(@Valid @RequestParam("partID") int theId,Model theModel){
 
         PartService repo=context.getBean(PartServiceImpl.class);
         OutsourcedPartService outsourcedrepo=context.getBean(OutsourcedPartServiceImpl.class);

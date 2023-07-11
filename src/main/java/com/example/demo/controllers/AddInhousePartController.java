@@ -3,6 +3,7 @@ package com.example.demo.controllers;
 import com.example.demo.domain.InhousePart;
 import com.example.demo.service.InhousePartService;
 import com.example.demo.service.InhousePartServiceImpl;
+import com.example.demo.validators.ValidInventory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
-
+@ValidInventory
 @Controller
 public class AddInhousePartController{
     @Autowired
@@ -32,6 +33,12 @@ public class AddInhousePartController{
         if(theBindingResult.hasErrors()){
             return "InhousePartForm";
         }
+
+        else if (part.getInv() < part.getMinInv() || part.getInv() > part.getMaxInv()) {
+            theModel.addAttribute("errorMessage", "INVENTORY MUST BE SET BETWEEN MINIMUM AND MAXIMUM");
+            return "InhousePartForm";
+        }
+
         else{
         InhousePartService repo=context.getBean(InhousePartServiceImpl.class);
         InhousePart ip=repo.findById((int)part.getId());

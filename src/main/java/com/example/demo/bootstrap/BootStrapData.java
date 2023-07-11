@@ -2,11 +2,9 @@ package com.example.demo.bootstrap;
 
 import com.example.demo.domain.Product;
 import com.example.demo.domain.InhousePart;
-import com.example.demo.repositories.InhousePartRepository;
-import com.example.demo.repositories.OutsourcedPartRepository;
-import com.example.demo.repositories.PartRepository;
-import com.example.demo.repositories.ProductRepository;
+import com.example.demo.repositories.*;
 import com.example.demo.service.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.ApplicationContext;
@@ -52,7 +50,7 @@ public class BootStrapData implements CommandLineRunner {
 
         InhousePart part2 = new InhousePart();
             part2.setId(222);
-            part2.setName("part2");
+            part2.setName("memory");
             part2.setPrice(100.0);
             part2.setInv(15);
             part2.setMinInv(10);
@@ -61,7 +59,7 @@ public class BootStrapData implements CommandLineRunner {
 
         InhousePart part3 = new InhousePart();
             part3.setId(333);
-            part3.setName("part3");
+            part3.setName("gpu");
             part3.setPrice(100.0);
             part3.setInv(15);
             part3.setMinInv(10);
@@ -70,7 +68,7 @@ public class BootStrapData implements CommandLineRunner {
 
         InhousePart part4 = new InhousePart();
             part4.setId(444);
-            part4.setName("part4");
+            part4.setName("cpu");
             part4.setPrice(100.0);
             part4.setInv(15);
             part4.setMinInv(10);
@@ -79,7 +77,7 @@ public class BootStrapData implements CommandLineRunner {
 
         InhousePart part5 = new InhousePart();
             part5.setId(555);
-            part5.setName("part5");
+            part5.setName("motherboard");
             part5.setPrice(100.0);
             part5.setInv(15);
             part5.setMinInv(10);

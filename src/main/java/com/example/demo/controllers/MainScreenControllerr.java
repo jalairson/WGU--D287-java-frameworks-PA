@@ -17,9 +17,6 @@ public class MainScreenControllerr {
     private PartService partService;
     private ProductService productService;
 
-    private List<Part> theParts;
-    private List<Product> theProducts;
-
     public MainScreenControllerr(PartService partService,ProductService productService){
         this.partService=partService;
         this.productService=productService;

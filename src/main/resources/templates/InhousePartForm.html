@@ -14,7 +14,9 @@
 
 <h1>Inhouse Part Detail</h1>
 <form action="#" th:action="@{/showFormAddInPart}" th:object="${inhousepart}" method="POST"}>
-
+    <div class="error-message" th:if="${errorMessage}">
+        <p th:text="${errorMessage}"></p>
+    </div>
 <!-- Add hidden form field to handle update -->
     <p><input type="hidden" th:field="*{id}"/></p>
 

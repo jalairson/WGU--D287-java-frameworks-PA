@@ -60,6 +60,8 @@ G. Modify the parts to track maximum and minimum inventory by doing the followin
 
 - added minimum and maximum inventory controls to [Part.java] (lines 29 -33) -
 
+- altered [AddInhousePartController.java] (lines 37 - 40) and [AddOutsourcedPartController.java] (lines 41 - 44) to reject new parts with parameters outside of minInv and maxInv -
+
 ============================================================================================================================================================================
 
 H. Add validation for between or at the maximum and minimum fields. The validation must include the following:
